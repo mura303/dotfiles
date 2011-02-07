@@ -17,9 +17,6 @@ export JLESSCHARSET=japanese-ujis
 # rsync では ssh を使う。
 export RSYNC_RSH=ssh
 
-# 環境変数 LANG を消去する。日本語メッセージを出してほしくないため。
-unset LANG
-
 # 対話的モードなら環境変数 PS1 (プロンプト文字列) が設定されている
 # はずなので、それを調べる。
 if [[ "$PS1" ]]; then
