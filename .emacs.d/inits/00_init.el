@@ -27,7 +27,7 @@
     (setq exec-path (append (list dir) exec-path))))
 
 ;; mail address
-(setq user-mail-address "main@handlename.net")
+(setq user-mail-address "myname@example.com")
 
 ;; meta key
 (setq ns-command-modifier (quote meta))
@@ -38,6 +38,8 @@
 
 ;; ベルを鳴らさない
 (setq ring-bell-function 'ignore)
+
+(setq kill-whole-line t)
 
 ;; 1行ずつスクロール
 (setq scroll-step 1)
