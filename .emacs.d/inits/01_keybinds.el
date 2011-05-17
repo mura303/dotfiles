@@ -11,6 +11,7 @@
 (global-set-key (kbd "C-r")       'replace-string)
 (global-set-key (kbd "C-x F")     'set-fill-column)
 (global-set-key (kbd "C-/")       'undo)
+(global-set-key (kbd "C-z")       'scroll-down)
 
 (global-set-key (kbd "C-x C-b")   'electric-buffer-list)
 
