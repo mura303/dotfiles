@@ -8,6 +8,7 @@
 (global-set-key (kbd "C-t")       'next-multiframe-window)
 (global-set-key (kbd "C-S-t")     'previous-multiframe-window)
 (global-set-key (kbd "C-/")       'undo)
+(global-set-key (kbd "C-?") 'redo)
 (global-set-key (kbd "C-z")       'scroll-down)
 
 (global-set-key (kbd "C-x C-b")   'electric-buffer-list)
@@ -17,3 +18,12 @@
 (global-set-key "\C-q\C-q" 'quoted-insert)
 (global-set-key "\C-q\C-e" 'my-open-explorer)
 (global-set-key "\C-q\C-s" 'my-xyzzy-grep)
+
+(global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "M-.") 'dabbrev-expand)
+(global-set-key (kbd "C-o") 'call-last-kbd-macro)
+
+(global-set-key  [C-tab] 'other-frame)
+(global-set-key  [C-S-tab] (lambda () (interactive) (other-frame -1) ) )
+
+(global-set-key "\C-xt" 'ff-find-other-file)
