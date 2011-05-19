@@ -2,15 +2,15 @@
 ;;; <plaintext>
 ;;; revive.el: Resume Emacs.
 ;;; (c) 1994-2003 by HIROSE Yuuji [yuuji@gentei.org]
-;;; $Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp $
-;;; Last modified Tue May 13 10:18:52 2008 on firestorm
+;;; $Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp yuuji $
+;;; Last modified Wed May  4 07:25:06 2011 on firestorm
 
 ;;;[[[   NOTICE 注意 NOTICE 注意 NOTICE 注意 NOTICE 注意 NOTICE 注意   ]]]
 ;;;--------------------------------------------------------------------------
 ;;;	If you are using `windows.el', you can omit the settings of
 ;;;	define-key and autoload.
 ;;;	windows.elを普段使っている場合は revive.el のためのキーの割り当
-;;;	てもautoloadの設定もする必要がありません。
+;;;	てもautoloadの設定つｷる必要がありません。
 ;;;--------------------------------------------------------------------------
 ;;;
 ;;;		Resume Emacs:		revive.el
@@ -138,9 +138,9 @@
 ;;;【reviveとは】
 ;;;
 ;;;	  revive.el を使うと、Emacs 使用時の状態をファイルにセーブして、
-;;;	次回 Emacs を起動する時にその状態に復帰することができます。もち
-;;;	ろんウィンドウの分割状態も復元されるので saveconf や desktop で
-;;;	いらいらしていた人にもお勧めです。
+;;;	次回 Emacs を起動する時にその状態に復帰することができます。つｿ
+;;;	ろんウィンドウの分割状態ぷ恁ｳされるので saveconf や desktop で
+;;;	いらいらしていた人につｨ勧めです。
 ;;;
 ;;;【組み込み方】
 ;;;
@@ -159,11 +159,11 @@
 ;;;
 ;;;【使い方】
 ;;;
-;;;	  上の define-key をした場合には、C-x S で現在の編集状態をセーブ
+;;;	  上の define-key やｵた場合には、C-x S で現在の編集状態をセーブ
 ;;;	することができます。save-current-configuration 関数に数引数をつ
 ;;;	けると複数の状態を別々にセーブできます。「C-u 2 C-x S」とすると2
-;;;	番のバッファに現状をセーブできます。これをロードする時も同様に
-;;;	「C-u 2 C-x F」とタイプすると2番のバッファから状態をロードします。
+;;;	番のバッファに現状をセーブできます。これゅ香[ドする時ふｯ様に
+;;;	「C-u 2 C-x F」とタイプすると2番のバッファから状態ゅ香[ドします。
 ;;;
 ;;;【変数のセーブ】
 ;;;
@@ -172,7 +172,7 @@
 ;;;	数は revive:save-variables-local-default に定義されています。ほ
 ;;;	かの変数も保存したい場合は、revive:save-variables-global-private 
 ;;;	に global 変数名を、revive:save-variables-local-private に local 
-;;;	変数名をそれぞれリストの形で定義しておきます。例えば gmhist を使っ
+;;;	変数名やｻれぞれリストの形で定義しておきます。例えば gmhist を使っ
 ;;;	ている場合には、
 ;;;
 ;;;		(setq revive:save-variables-global-private
@@ -226,7 +226,7 @@
 ;;;							yuuji@gentei.org
 
 (defconst revive:version
-  "$Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp $"
+  "$Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp yuuji $"
   "Version of revive.el")
 
 (defconst revive:version-prefix ";;;")
@@ -277,7 +277,7 @@
 		 (throw 'found nil)))))
 	(error "Unexpected window configuration."))
     (setq curwin win wlist (list win))
-    (while (not (eq curwin (setq win (next-window win))))
+    (while (not (eq curwin (setq win (next-window win "w/o mini"))))
       (setq wlist (append wlist (list win)))) ;use append to preserve order
     wlist))
 
@@ -891,7 +891,7 @@ Configuration should be saved by save-current-configuration."
 (provide 'revive)
 
 
-;; $Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp $
+;; $Id: revive.el,v 2.19 2008/05/13 01:19:16 yuuji Exp yuuji $
 ;; $Log: revive.el,v $
 ;; Revision 2.19  2008/05/13 01:19:16  yuuji
 ;; Add below to revive:save-variables-global-default.

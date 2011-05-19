@@ -8,20 +8,7 @@
       (tool-bar-mode nil)                  ; ツールバー非表示
       (set-scroll-bar-mode nil)            ; スクロールバー非表示
       (setq line-spacing 0.2)              ; 行間
-      (when (>= emacs-major-version 23)
-        (tool-bar-mode nil)
-        (set-frame-font "Menlo-12")
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0208
-                          (font-spec :family "M+2VM+IPAG circle" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'japanese-jisx0212
-                          (font-spec :family "M+2VM+IPAG circle" :size 14))
-        (set-fontset-font (frame-parameter nil 'font)
-                          'katakana-jisx0201
-                          (font-spec :family "M+2VM+IPAG circle" :size 14)))
       (setq ns-pop-up-frames nil)))
-
 
 ;;
 ;; Color

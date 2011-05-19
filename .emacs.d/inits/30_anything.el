@@ -73,11 +73,6 @@
                       anything-c-source-etags-select))
       "Find Tag: " nil)))
 
-;; anything-hatena-bookmark
-(require 'anything-hatena-bookmark)
-(define-key global-map (kbd "C-c C-a b") 'anything-hatena-bookmark)
-
-
 ;; 候補ウィンドウを常に下部に表示
 ;; INSTALL
 ;; (install-elisp "http://nschum.de/src/emacs/split-root/split-root.el")

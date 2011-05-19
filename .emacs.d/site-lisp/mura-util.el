@@ -1,4 +1,4 @@
-(provide 'myutil)
+(provide 'mura-util)
 (defun my-open-explorer ()
   (interactive)
   (call-process "explorer" nil 0 nil "."))
