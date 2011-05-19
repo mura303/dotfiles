@@ -9,7 +9,6 @@
 (global-set-key (kbd "C-S-t")     'previous-multiframe-window)
 (global-set-key (kbd "C-/")       'undo)
 (global-set-key (kbd "C-z")       'scroll-down)
-(global-set-key (kbd "C-v")       'scroll-up)
 
 (global-set-key (kbd "C-x C-b")   'electric-buffer-list)
 

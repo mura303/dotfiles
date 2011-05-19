@@ -16,7 +16,7 @@
 
 ;; org-remember
 (org-remember-insinuate)
-(setq org-directory "~/Dropbox/memo/")
+(setq org-directory "~/")
 (setq org-default-notes-file (concat org-directory "note.org"))
 (setq org-remember-templates
       '(("Todo" ?t "** TODO %?\n   %t\n   %i" nil "Inbox")
