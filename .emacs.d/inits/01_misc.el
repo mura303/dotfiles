@@ -29,7 +29,6 @@
  lazy-highlight-initial-delay 0
  ls-lisp-dirs-first t
  make-backup-files t
- backup-inhibited t
  next-line-add-newlines nil
  recentf-max-saved-items 100
  resize-mini-windows nil
@@ -43,3 +42,6 @@
  scroll-step 1
  )
 
+(setq backup-directory-alist
+      (cons (cons "\\.*$" (expand-file-name "~/.emacs.d/auto-save-list"))
+            backup-directory-alist))
