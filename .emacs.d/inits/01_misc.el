@@ -16,6 +16,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 
+
 (setq
  column-number-mode     t
  line-number-mode       t
@@ -28,18 +29,17 @@
  lazy-highlight-initial-delay 0
  ls-lisp-dirs-first t
  make-backup-files t
+ backup-inhibited t
  next-line-add-newlines nil
  recentf-max-saved-items 100
  resize-mini-windows nil
 
  vc-make-backup-files   t
-; version-control nil
+ version-control nil
  view-read-only t
  visible-bell t
-
  scroll-conservatively 35
  scroll-margin 0
  scroll-step 1
- 
  )
 
