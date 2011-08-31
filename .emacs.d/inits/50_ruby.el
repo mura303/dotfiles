@@ -2,5 +2,5 @@
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
-             (setq tab-width 4)
+             (setq tab-width 2)
              (setq ruby-indent-level tab-width)))
